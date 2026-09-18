@@ -1,0 +1,19 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Label text="Mission Control" name="MissionControl" style="color: rgb(255, 255, 255); font-size: 100px; width: 1900px; height: 100px;"/>
+    <ui:GroupBox name="OrbitalData" style="translate: 0 301px;">
+        <ui:Label text="Orbital Data" name="OrbitData" style="translate: 0 72px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 50px;"/>
+        <ui:Label text="Satellite" name="Satellite" style="translate: 0 72px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px;"/>
+        <ui:Label text="Altitude" name="Altitude" style="translate: 0 72px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px;"/>
+        <ui:Label text="Velocity" name="Velocity" style="translate: 0 72px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px;"/>
+        <ui:Label text="Status" name="Status" style="translate: 0 72px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px;"/>
+        <ui:Label text="DemoSatellite" name="DemoSatellite" style="translate: 907px -129px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px; -unity-text-align: upper-right;"/>
+        <ui:Label text="PLACEHOLDER" name="PLACEHOLDER" style="translate: 907px -129px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px; -unity-text-align: upper-right;"/>
+        <ui:Label text="PLACEHOLDER" name="PLACEHOLDER" style="translate: 907px -129px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px; -unity-text-align: upper-right;"/>
+        <ui:Label text="PLACEHOLDER" name="PLACEHOLDER" style="translate: 907px -129px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px; -unity-text-align: upper-right;"/>
+    </ui:GroupBox>
+    <ui:GroupBox name="SatelliteSelection" style="width: 1900px; height: 300px; translate: 0 -432px;">
+        <ui:Label text="Satellite Selection" name="SatelliteSelection" style="color: rgb(255, 255, 255); font-size: 70px;"/>
+        <ui:DropdownField label="SelectSatellite" name="SelectSatellite" style="flex-direction: row; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 50px; -unity-text-align: upper-center; align-items: flex-start; justify-content: center;"/>
+        <ui:Button text="Start Tracking" selectable="false" name="StartTracking" style="width: 481px; height: 93px; -unity-text-align: middle-center; translate: 0 0; font-size: 50px;"/>
+    </ui:GroupBox>
+</ui:UXML>
