@@ -5,7 +5,7 @@
         <ui:DropdownField label="SelectSatellite" name="SelectSatellite" style="flex-direction: row; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 50px; -unity-text-align: upper-center; align-items: flex-start; justify-content: center;"/>
         <ui:Button text="Start Tracking" selectable="false" name="StartTracking" style="width: 481px; height: 93px; -unity-text-align: middle-center; translate: 0 0; font-size: 50px;"/>
     </ui:GroupBox>
-    <ui:GroupBox name="OrbitalData" style="translate: 0 80px;">
+    <ui:GroupBox name="OrbitalData" style="translate: 0 30px;">
         <ui:Label text="Orbital Data" name="OrbitData" style="translate: 0 72px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 50px;"/>
         <ui:Label text="Satellite" name="Satellite" style="translate: 0 72px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px;"/>
         <ui:Label text="Altitude" name="Altitude" style="translate: 0 72px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 30px; width: 1000px;"/>
