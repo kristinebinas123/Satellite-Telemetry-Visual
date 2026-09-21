@@ -2,6 +2,7 @@
 #include <string>
 #include <vector> 
 
+
 struct SatelliteGraph
 {
     std::string Satellite;
@@ -34,14 +35,14 @@ int main()
     mySatellite2.x = 1.0; 
     mySatellite2.y = 2.3; 
     mySatellite2.z = 3.2; 
-    mySatellite2.altitude = 1.3; 
+    mySatellite2.altitude = 1.8; 
 
     mySatellite3.time = 2; 
     mySatellite3.Satellite = "European Space"; 
     mySatellite3.x = 1.1; 
     mySatellite3.y = 3.3; 
     mySatellite3.z = 6.4; 
-    mySatellite3.altitude = 1.2; 
+    mySatellite3.altitude = 1.7; 
 
 
 
@@ -61,13 +62,49 @@ int main()
 void SatellitesGraph(const std::vector<SatelliteGraph>& satellites)
 {
 
+    double totalAltitude = 0.0; 
+    double highestAltitude = 1.5; 
+    int counter = 0; 
+   
+
     for (const SatelliteGraph& satellite : satellites)
     {
-    std::cout << "This would show the graph\n";
-   /* std::cout << "Satellite: " << satellite.Satellite << "\n"; 
-    std::cout << "Time: " << satellite.time << "\n";
-    std::cout << "Altitude: " << satellite.altitude << "\n"; */ 
-    std::cout << "Satellite: " << satellite.Satellite << " Time: " << satellite.time << " Altitude " << satellite.altitude << " Position: " << satellite.x << ", " << satellite.y << ", " << satellite.z << "\n"; 
+     counter ++; 
+     totalAltitude += satellite.altitude; 
+
+    std::cout <<  satellite.Satellite  << "  " << counter << " Graph Data\n";
+    std::cout << "Satellite: " << satellite.Satellite << "\n"
+          << "Time: " << satellite.time << "\n"
+          << "Altitude: " << satellite.altitude << "\n"
+          << "Position: " << satellite.x << ", " << satellite.y << ", " << satellite.z << "\n\n";
     } 
+
+    if (!satellites.empty())
+
+   
+{
+    double averageAltitude = totalAltitude / satellites.size();
+    std::cout << "Average altitude: " << averageAltitude << "\n";
+
+    for(const SatelliteGraph& satellite : satellites) 
+    {
+      
+    
+        if (highestAltitude < satellite.altitude) 
+        {
+            highestAltitude = satellite.altitude; 
+
+            
+
+        }
+
+    }
+
+    std::cout << "Highest Altitude: " << highestAltitude << "\n";
+
+}
+
+
+
 
 }
