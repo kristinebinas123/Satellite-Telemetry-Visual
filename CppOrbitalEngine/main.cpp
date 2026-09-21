@@ -5,21 +5,36 @@ struct SatelliteGraph
 {
     std::string Satellite;
     int time;
-    double units;
+    double x;
+    double y;
+    double z;
+    double altitude;
 };
+
+void SatellitesGraph(const SatelliteGraph& satellite);
 
 int main()
 {
     SatelliteGraph mySatellite;
 
     mySatellite.time = 1;
-    mySatellite.units = 0.5;
     mySatellite.Satellite = "NASA";
+    mySatellite.x = 0.0;
+    mySatellite.y = 0.0;
+    mySatellite.z = 0.0;
+    mySatellite.altitude = 1.5;
 
-    std::cout << "Hello, from CppOrbitalEngine! This is Kris! The start of the C++\n";
-    std::cout << "Satellite: " << mySatellite.Satellite << "\n";
-    std::cout << "Time: " << mySatellite.time << "\n";
-    std::cout << "Units: " << mySatellite.units << "\n";
+    std::cout << "Hello, from CppOrbitalEngine! This is Kris!\n";
+
+    SatellitesGraph(mySatellite);
 
     return 0;
+}
+
+void SatellitesGraph(const SatelliteGraph& satellite)
+{
+    std::cout << "This would show the graph\n";
+    std::cout << "Satellite: " << satellite.Satellite << "\n"; 
+    std::cout << "Time: " << satellite.time << "\n";
+    std::cout << "Altitude: " << satellite.altitude << "\n";
 }
