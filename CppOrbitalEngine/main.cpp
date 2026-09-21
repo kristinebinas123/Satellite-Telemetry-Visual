@@ -35,7 +35,7 @@ int main()
     mySatellite2.x = 1.0; 
     mySatellite2.y = 2.3; 
     mySatellite2.z = 3.2; 
-    mySatellite2.altitude = 1.8; 
+    mySatellite2.altitude = 1.65; 
 
     mySatellite3.time = 2; 
     mySatellite3.Satellite = "European Space"; 
@@ -63,14 +63,16 @@ void SatellitesGraph(const std::vector<SatelliteGraph>& satellites)
 {
 
     double totalAltitude = 0.0; 
-    double highestAltitude = 1.5; 
     int counter = 0; 
-   
 
     for (const SatelliteGraph& satellite : satellites)
     {
      counter ++; 
      totalAltitude += satellite.altitude; 
+     
+     
+   
+     
 
     std::cout <<  satellite.Satellite  << "  " << counter << " Graph Data\n";
     std::cout << "Satellite: " << satellite.Satellite << "\n"
@@ -81,27 +83,49 @@ void SatellitesGraph(const std::vector<SatelliteGraph>& satellites)
 
     if (!satellites.empty())
 
-   
 {
+    double highestAltitude = satellites[0].altitude;
+    double lowestAltitude = satellites[0].altitude;
+
+    std::string highestAltitudeSatellite = satellites[0].Satellite;
+    std::string lowestAltitudeSatellite = satellites[0].Satellite;
+
+
+    // calculate average
     double averageAltitude = totalAltitude / satellites.size();
-    std::cout << "Average altitude: " << averageAltitude << "\n";
 
     for(const SatelliteGraph& satellite : satellites) 
     {
+       
       
     
         if (highestAltitude < satellite.altitude) 
         {
-            highestAltitude = satellite.altitude; 
+            highestAltitude = satellite.altitude;
+            highestAltitudeSatellite = satellite.Satellite; 
 
             
 
         }
 
-    }
+        if (lowestAltitude > satellite.altitude)
+        {
+            lowestAltitude = satellite.altitude; 
+            lowestAltitudeSatellite = satellite.Satellite; 
+            
+            
+        }     
 
+    }
+   
+    std::cout << "Average altitude: " << averageAltitude << "\n";    
+    
+    std::cout << "Highest Altitude Name:" << highestAltitudeSatellite << "\n";
     std::cout << "Highest Altitude: " << highestAltitude << "\n";
 
+    std::cout << "Lowest Altitude Name:" << lowestAltitudeSatellite << "\n";
+    std::cout << "Lowest Altitude: " << lowestAltitude << "\n";
+    
 }
 
 
